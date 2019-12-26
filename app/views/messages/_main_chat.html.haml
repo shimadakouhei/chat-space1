@@ -1,0 +1,35 @@
+.main
+  .main__group
+    .main-header__left
+      .main-header__a
+        gdfg
+      .main-header__left-member
+        %h Member:fyfd
+    .main-header__right__edit
+      = link_to "#" do
+        Edit  
+  .messages
+    .message-1
+      .messages__info-1
+        .messages__info-talker-1
+          %p aaaaaa
+        .messages__info-date-1
+          %p 2019/12/25(Wed)23:39:17
+      .messages__text-1
+        %p gjhgfdg
+    .message-2    
+      .messages__info-2
+        .messages__info-talker-2
+          %p bbbbbbb
+        .messages__info-date-2
+          %p 2019/12/26(Wed)23:39:17
+      .messages__text-2
+        %p jkgfdhvgchgfhgchgvgcjvgc
+  .form
+    %form.new-message
+      .input-box
+        %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type:"text"}/
+
+        %la.input-box__image
+          = icon('fas','image')
+      %input.submit-btn{name: "commit", type: "submit", value: "Send"}
