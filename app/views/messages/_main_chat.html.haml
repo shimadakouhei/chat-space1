@@ -1,29 +1,29 @@
 .main
   .main__group
-    .main-header__left
-      .main-header__a
+    .main__group__left
+      .main__group__left__name
         gdfg
-      .main-header__left-member
+      .main__group__left__member
         %h Member:fyfd
-    .main-header__right__edit
-      = link_to "#" do
+    .main__group__right
+      = link_to "#", class: "edit" do
         Edit  
-  .messages
-    .message-1
-      .messages__info-1
-        .messages__info-talker-1
-          %p aaaaaa
-        .messages__info-date-1
-          %p 2019/12/25(Wed)23:39:17
-      .messages__text-1
-        %p gjhgfdg
-    .message-2    
-      .messages__info-2
-        .messages__info-talker-2
+  .message
+    .message__info1
+      .message__info1__main
+        .message__info1__main__talker1
+          aaaaaa
+        .message__info1__main__date
+          2019/12/25(Wed)23:39:17
+      .message__info1__text1
+        gjhgfdg
+    .message__info2
+      .message__info2__main
+        .message__info2__main__talker2
           %p bbbbbbb
-        .messages__info-date-2
+        .message__info2__main__date
           %p 2019/12/26(Wed)23:39:17
-      .messages__text-2
+      .message__info2__text2
         %p jkgfdhvgchgfhgchgvgcjvgc
   .form
     %form.new-message

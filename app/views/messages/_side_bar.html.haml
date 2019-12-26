@@ -1,19 +1,23 @@
 .side-bar
   .side-bar__user-name
-    .top-header
-      .top-items
-        %p.side-header__username
+    .side-bar__user-name__top-header
+      .side-bar__user-name__top-items
+        %p.side-bar__user-name__top-items__names
           fyfd
-        %ul.side-header__menu
-          %li.side-header__edit-user
+        %ul.side-bar__user-name__top-items__menu
+          %li.side-bar__user-name__top-items__menu__edit-user
             = link_to "#" do
               = icon("fas", "edit",class: 'strong')
-          %li.side-header__new-group
+          %li.side-bar__user-name__top-items__menu__new-group
             = link_to "#" do
               = icon("fas", "cog",class: 'strong')
   .groups
-    = link_to "#", class: "group" do
-      %p.group__group-name
-        gdfg
-      %p.group__latest-message
-        まだメッセージがありません
+    .groups_box
+      .groups__box__a
+        = link_to "#", class: "group" do
+          %p.groups__box__a__name
+            gdfg
+      .groups__box__b   
+        = link_to "#", class: "group" do
+          %p.groups__box__b__latest-message
+            まだメッセージがありません
