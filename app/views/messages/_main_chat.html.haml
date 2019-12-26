@@ -1,0 +1,35 @@
+.main
+  .main__group
+    .main__group__left
+      .main__group__left__name
+        gdfg
+      .main__group__left__member
+        %h Member:fyfd
+    .main__group__right
+      = link_to "#", class: "edit" do
+        Edit  
+  .message
+    .message__info1
+      .message__info1__main
+        .message__info1__main__talker1
+          aaaaaa
+        .message__info1__main__date
+          2019/12/25(Wed)23:39:17
+      .message__info1__text1
+        gjhgfdg
+    .message__info2
+      .message__info2__main
+        .message__info2__main__talker2
+          %p bbbbbbb
+        .message__info2__main__date
+          %p 2019/12/26(Wed)23:39:17
+      .message__info2__text2
+        %p jkgfdhvgchgfhgchgvgcjvgc
+  .form
+    %form.new-message
+      .input-box
+        %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type:"text"}/
+
+        %la.input-box__image
+          = icon('fas','image')
+      %input.submit-btn{name: "commit", type: "submit", value: "Send"}
