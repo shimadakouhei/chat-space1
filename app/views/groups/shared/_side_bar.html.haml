@@ -6,18 +6,16 @@
           fyfd
         %ul.side-bar__user-name__top-items__menu
           %li.side-bar__user-name__top-items__menu__edit-user
-            = link_to "#" do
+            = link_to new_group_path do
               = icon("fas", "edit",class: 'strong')
           %li.side-bar__user-name__top-items__menu__new-group
             = link_to "#" do
               = icon("fas", "cog",class: 'strong')
   .groups
-    .groups_box
-      .groups__box__a
-        = link_to "#", class: "group" do
-          %p.groups__box__a__name
-            gdfg
-      .groups__box__b   
-        = link_to "#", class: "group" do
-          %p.groups__box__b__latest-message
-            まだメッセージがありません
+    - current_user.groups.each do |group|
+      .groups__box
+        = link_to '#' do
+          .group__box__name
+            = group.name
+          .group__box__latest-message
+            メッセージはまだありません。

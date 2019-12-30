@@ -41,23 +41,20 @@
     box-sizing: border-box;
     &__box{
       margin-bottom: 40px;
-      &__a {
-      
+
         &__name{
         font-size: 15px;
         margin-bottom: 5px;
         color: #ffffff;
         }
-      }
-      &__b {
-
         &__latest-message{
         font-size: 11px;
         color: #ffffff;
         }
-      }
     }
-  }
+
+    }
+  
 }
 .group{
   color:white;
