@@ -38,75 +38,60 @@
         }
     }
 
-    .message {
+    .messages {
+      background-color: #FAFAFA;
       box-sizing: border-box;
-      background-color: #fafafa;
-      height: calc(100vh - 190px);
-      padding: 46px 40px;
-      &__info1{
-          padding-bottom: 40px;
-          &__main{
-              display: flex;
-              padding-bottom: 12px;
-              &__talker1 {
-                color: #333333;
-                font-size: 16px;
-              }
-              &__date{
-                color: #999999;
-                font-size: 12px;
-                margin-left: 12px;
-              }
+      padding: 46px 40px 0;
+      height: calc(100% - 100px - 90px);
+      .message {
+        .upper-message {
+          display: flex;
+          &__user-name {
+            color: $black;
+            font-size: 16px;
+            font-weight: bold;
           }
-          &__text1{
-            color: #434A54;
+          &__date {
+            color: $light_gray;
+            font-size: 12px;
+            padding-left: 10px;
+          }
+        }
+        .lower-message {
+          margin-top: 10px;
+          &__content {
+            color: $black;
             font-size: 14px;
-            margin-bottom: 10px;
+            margin-bottom: 40px;
           }
+        }
       }
-      // &__info2 {
-      //   padding-bottom: 40px;
-      //     &__main {
-      //     display: flex;
-      //     padding-bottom: 12px;
-      //       &__talker2 {
-      //       color: #333333;
-      //       font-size: 16px;
-      //       }
-      //       &__date {
-      //       color: #999999;
-      //       font-size: 12px;
-      //       margin-left: 12px;
-      //       }
-      //     }
-      //     &__text2 {
-      //     color: #434A54;
-      //     font-size: 14px;
-      //     margin-bottom: 10px;
-      //     }
-      // }
-      
     }
-    .main__message-form {
-      background-color: pink;
-      width: calc(100vw - 300px);
-      height: 90px;
-      position: fixed;
-  }
 
   .form {
     background-color: #DDDDDD;
     box-sizing: border-box;
     height: 90px;
     padding: 20px 50px 20px 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .messages{
+      width: 100%;
+      // position: relative;
+    }
+
     &__message {
       border: none;
       float: left;
       height: 50px;
-      width: calc(100% - 150px);
+      // width: 100%;
+      display: flex;
       padding: 0 40px 0 10px;
     }
     &__mask {
+      // position: absolute;
       background-color: $white;
       float: left;
       height: 50px;

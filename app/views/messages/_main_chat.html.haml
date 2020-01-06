@@ -2,21 +2,24 @@
   .main__group
     .main__group__left
       .main__group__left__name
-        gdfg
+        = @group.name
       .main__group__left__member
-        %h Member:masa
+        Member:
+        - @group.users.each do |user|
+          = user.name
     .main__group__right
-      = link_to "#", class: "edit" do
+      = link_to "edit", class: "edit" do
         Edit  
-  .message
-    .message__info1
-      .message__info1__main
-        .message__info1__main__talker1
-          aaaaaa
-        .message__info1__main__date
-          2019/12/25(Wed)23:39:17
-      .message__info1__text1
-        gjhgfdg
+  .messages
+    = render @messages
+    -# .message__info1
+    -#   .message__info1__main
+    -#     .message__info1__main__talker1
+    -#       aaaaaa
+    -#     .message__info1__main__date
+    -#       2019/12/25(Wed)23:39:17
+    -#   .message__info1__text1
+    -#     gjhgfdg
     -# .message__info2
     -#   .message__info2__main
     -#     .message__info2__main__talker2
@@ -27,9 +30,10 @@
     -#     %p jkgfdhvgchgfhgchgvgcjvgc
   .form
     = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
-          = icon('fas', 'image', class: 'icon')
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit'
+      .messages
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
