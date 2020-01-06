@@ -41,23 +41,28 @@
     box-sizing: border-box;
     &__box{
       margin-bottom: 40px;
-
+      // color: white;
         &__name{
         font-size: 15px;
         margin-bottom: 5px;
-        color: #ffffff;
+        // color: #ffffff;
         }
         &__latest-message{
         font-size: 11px;
-        color: #ffffff;
+        // color: #ffffff;
         }
     }
 
     }
   
 }
-.group{
-  color:white;
+// .group{
+//   color:white;
+//   text-decoration: none;
+//   margin-bottom: 40px;
+// }
+
+.message{
+  color: white;
   text-decoration: none;
-  margin-bottom: 40px;
 }
