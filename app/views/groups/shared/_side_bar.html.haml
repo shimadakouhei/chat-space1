@@ -9,7 +9,7 @@
             = link_to new_group_path do
               = icon("fas", "edit",class: 'strong')
           %li.side-bar__user-name__top-items__menu__new-group
-            = link_to "#" do
+            = link_to edit_user_path(current_user) do
               = icon("fas", "cog",class: 'strong')
   .groups
     - current_user.groups.each do |group|
@@ -18,4 +18,4 @@
           .group__box__name
             = group.name
           .group__box__latest-message
-            メッセージはまだありません。
+            = group.show_last_message
