@@ -15,10 +15,10 @@
 
   .form
     = form_for [@group, @message] do |f|
-      .form_message
+      .form__message
         = f.text_field :content, class: 'form__message__text', placeholder: 'type a message'
-        .form__message__mask
-          = f.label :image, class: 'form__message__mask__image' do
-            = icon('fas', 'image', class: 'icon')
-            = f.file_field :image, class: 'form__message__mask__image__hidden'
-        = f.submit 'Send', class: 'form__message__submit'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
