@@ -87,8 +87,6 @@ $('#new_message').on('submit', function(e){
     //メッセージが入ったHTMLに、入れ物ごと追加
     $('.messages').append(insertHTML);
     $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-    $("#new_message")[0].reset();
-    $(".form__submit").prop("disabled", false);
     }
   })
   .fail(function() {
