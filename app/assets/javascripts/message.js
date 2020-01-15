@@ -67,15 +67,15 @@ $('#new_message').on('submit', function(e){
   //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
   if (document.location.href.match(/\/groups\/\d+\/messages/)){
   last_message_id = $('.message:last').data("message-id");
-  $.ajax({
-    //ルーティングで設定した通りのURLを指定
-    url: "api/messages",
-    //ルーティングで設定した通りhttpメソッドをgetに指定
-    type: 'get',
-    dataType: 'json',
-    //dataオプションでリクエストに値を含める
-    data: {id: last_message_id}
-  })
+    $.ajax({
+      //ルーティングで設定した通りのURLを指定
+      url: "api/messages",
+      //ルーティングで設定した通りhttpメソッドをgetに指定
+      type: 'get',
+      dataType: 'json',
+      //dataオプションでリクエストに値を含める
+      data: {id: last_message_id}
+    })
   .done(function(messages) {
     if (messages.length !== 0) {
     //追加するHTMLの入れ物を作る
