@@ -68,7 +68,6 @@
         }
       }
     }
-
   .form {
     background-color: #DDDDDD;
     box-sizing: border-box;
@@ -100,9 +99,7 @@
     }     
       .hidden {
         display: none;
-      }
-        
-       
+      }      
       &__submit {
         background-color: $light_blue;
         border: none;
