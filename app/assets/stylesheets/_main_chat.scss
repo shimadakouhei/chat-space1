@@ -5,7 +5,7 @@
       background-color: #ffffff;
       height: 100px;
       border-bottom: 1px solid #eee;
-      padding: 0 40px;
+      // padding: 0 40px;
       display: flex;
       justify-content: space-between;
         &__left{
@@ -17,14 +17,14 @@
             }
             &__member{
               font-size: 12px;
-              color: #999999;
+              // color: #999999;
             }   
         }
 
         &__right {
           .edit{
             display: block;
-            text-decoration: none;
+            // text-decoration: none;
             color: #38aef0;
           }
           height: 40px;
